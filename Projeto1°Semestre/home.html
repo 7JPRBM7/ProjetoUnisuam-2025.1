@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pânico na Chapa</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="assets/img/logo.jpeg" rel="shortcut icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-area">
+                <img src="assets/img/logo.jpeg" alt="LogoPânicoNaChapa" class="logo">
+            </div>    
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+            <nav class="menu-area">
+                <ul class="menu">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icones-area">
+              <span onclick="window.location.href='carrinho.html'" style="cursor: pointer;">🛒</span>
+              <span id="usuario">👤</span>
+              <span id="theme-toggle">☀️</span>
+            </div>        
+        </div>
+    </header>
+    <div id="painel-usuario" class="painel-usuario">
+    </div>
+
+    <section class="main-section">
+        <div class="texto-esquerdo">
+            <h1>HAMBÚRGUERES DE OUTRO MUNDO!</h1>
+            <p>Hambúrgueres inspirados no melhor do terror.</p>
+            <div class="botoes">
+                <a href="#" class="btn-vermelho">Ver Cardápio</a>
+                <a href="#" class="btn-claro">Pedidos</a>
+            </div>
+        </div>
+
+        <div class="imagem-direita">
+            <img src="assets/img/mascote.png" alt="Mascote">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container rodape-container">
+            <div id="sobre" class="sobre-nos">
+                <h2>Sobre nós</h2>
+                <p>Bem-vindo ao Pânico na Chapa, onde o medo é o principal ingrediente!<br>Nossa hamburgueria traz o melhor do universo dos filmes de terror para o seu prato. Com uma aterrorizante... e deliciosa experiência que vai arrepuar sey paladar. Coragem para encarar o cardápio?</p>
+                
+            </div>
+            <div id="contato" class="contato">
+                <h2>Contato</h2>
+                <p>+55 (21) 98953-6318</p>
+                <p><a href="#">paniconachapacontact@gmail.com</a></p>
+                <p>Avenida Paris, 84, Bonsucesso, RJ - Brasil.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        toggle.addEventListener("click", function () {
+            menu.classList.toggle("show");
+        });
+    });
+</script>
+</body>
+</html>

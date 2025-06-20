@@ -1,0 +1,164 @@
+/* ------------------- Estilização do Cabeçalho ------------------- */
+
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    color: #f0e6d2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #410d06;
+    padding: 10px 0;
+}
+
+.header-container, .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    flex: 1;
+}
+
+.logo {
+    max-height: 100px;
+    border: solid #0d0d0d 1px;
+    border-radius: 100px;
+}
+
+.menu-area {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Rakkas', cursive;
+    font-size: 25px;
+}
+
+.icones-area {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-shrink: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+.icones-area span {
+    margin-left: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ------------------- Estilo do Painel do Usuário ------------------- */
+
+.painel-usuario {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #410d06;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    z-index: 1000;
+    font-size: 16px;
+    display: none;
+    font-family: 'Rakkas', cursive;
+}
+
+.painel-usuario.mostrar {
+    display: block;
+}
+
+.painel-usuario button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #fff;
+    color: #410d06;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ------------------- Menu Mobile ------------------- */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #410d06;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .menu.show {
+        display: flex;
+        border: solid 5px;
+        border-radius: 25px;
+        min-width: 150px;
+        min-height: 300px;
+    }
+
+    .menu.show li a {
+        border: solid 5px #212529;
+        border-radius: 100px;
+        padding: 0 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .icones-area {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,133 @@
+/* ------------------- Estilização da Seção Principal ------------------- */
+
+.main-section {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background-color: #0e0e0c;
+    color: #e7dbc5;
+}
+
+/* ------------------- Área de Texto à Esquerda ------------------- */
+
+.texto-esquerdo {
+    flex: 1;
+    max-width: 50%;
+}
+
+.texto-esquerdo h1 {
+    font-size: 48px;
+    font-family: 'Rakkas', sans-serif;
+    margin-bottom: 20px;
+}
+
+.texto-esquerdo p {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-family: 'Rakkas', sans-serif;
+}
+
+/* ------------------- Estilização dos Botões ------------------- */
+
+.botoes a {
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-block;
+    transition: 0.3s;
+    font-family: 'Rakkas', sans-serif;
+}
+
+.btn-vermelho {
+    background-color: #801c0e;
+    color: white;
+}
+
+.btn-vermelho:hover {
+    background-color: #a92517;
+}
+
+.btn-claro {
+    border: 2px solid #e7dbc5;
+    color: #e7dbc5;
+}
+
+.btn-claro:hover {
+    background-color: #e7dbc5;
+    color: #0e0e0c;
+}
+
+/* ------------------- Área da Imagem à Direita ------------------- */
+
+.imagem-direita {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem-direita img {
+    max-width: 600px;
+    height: auto;
+    margin-right: 0;
+    min-width: 200px;
+}
+
+/* ------------------- Responsividade ------------------- */
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .texto-esquerdo {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+
+    .texto-esquerdo h1,
+    .texto-esquerdo p {
+        font-size: 32px;
+    }
+
+    .imagem-direita {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .imagem-direita img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ------------------- Estilização do Modo Claro ------------------- */
+
+body.light-mode .main-section {
+    background-color: #ffffff;
+    color: #0e0e0c;
+}
+
+body.light-mode .texto-esquerdo h1,
+body.light-mode .texto-esquerdo p {
+    color: #0e0e0c;
+}
+
+body.light-mode .btn-claro {
+    background-color: #ffffff;
+    color: #0e0e0c;
+    border: 2px solid #0e0e0c;
+}
+
+body.light-mode .btn-claro:hover {
+    background-color: #0e0e0c;
+    color: #ffffff;
+}

@@ -1,0 +1,57 @@
+/* ------------------- Estilização do Rodapé ------------------- */
+
+.footer {
+    background-color: #410d06;
+    color: #f5e8d7;
+    padding: 50px 20px;
+    font-family: 'Rakkas', cursive;
+}
+
+.rodape-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ------------------- Estilo das Seções do Rodapé ------------------- */
+
+.sobre-nos,
+.contato {
+    flex: 1;
+}
+
+.sobre-nos h2, .contato h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sobre-nos p, .contato p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ------------------- Layout para Telas Maiores ------------------- */
+
+@media (min-width: 768px) {
+    .rodape-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .sobre-nos, .contato {
+        max-width: 50%;
+    }
+}
+
+/* ------------------- Layout para Telas Menores ------------------- */
+
+@media (max-width: 768px) {
+    .sobre-nos, .contato {
+        text-align: center;
+    }
+}

@@ -1,0 +1,230 @@
+/* ------------------- Estilização Geral ------------------- */
+
+.carrinho-main {
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    color: #f0e6d2;
+    font-family: 'Rakkas', sans-serif;
+}
+
+.carrinho-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* ------------------- Seção dos Produtos ------------------- */
+
+.carrinho-produtos {
+    flex: 2;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 30px;
+    color: #000;
+    border: solid 5px #0d0d0d;
+}
+
+.cabecalho-produto {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.produto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* ------------------- Colunas ------------------- */
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Detalhes do Produto */
+.produto-detalhes {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.produto-detalhes img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.produto-detalhes h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Controle de Quantidade */
+.produto-controle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.produto-controle button {
+    padding: 4px 10px;
+    cursor: pointer;
+    border: solid 2px;
+    border-radius: 20px;
+}
+
+.produto-controle a {
+    color: red;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+/* Preço */
+.produto-preco {
+    flex: 1;
+    text-align: right;
+}
+
+.produto-preco p {
+    margin: 2px 0;
+}
+
+/* ------------------- Resumo do Pedido ------------------- */
+
+.resumo-pedido {
+    flex: 1;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 30px;
+    color: #000;
+    border: solid 5px #0d0d0d;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resumo-pedido h2,
+.resumo-pedido h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.resumo-pedido form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resumo-pedido input[type="text"],
+.resumo-pedido input[type="number"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.resumo-pedido button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #410d06;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ------------------- Responsividade ------------------- */
+
+@media (max-width: 768px) {
+    .carrinho-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .produto-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .coluna {
+        flex: 1 1 100%;
+        min-width: 100px;
+    }
+
+    .produto-detalhes {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .produto-detalhes img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .produto-controle {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .produto-preco {
+        flex: 1 1 100%;
+        text-align: left;
+        font-size: 0.95rem;
+    }
+
+    .cabecalho-produto {
+        display: none;
+    }
+
+    .carrinho-produtos,
+    .resumo-pedido {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .resumo-pedido input[type="text"],
+    .resumo-pedido input[type="number"] {
+        width: 100%;
+    }
+
+    .resumo-pedido .valores {
+        font-size: 0.95rem;
+    }
+
+    .resumo-pedido button {
+        width: 100%;
+    }
+}
+
+/* ------------------- Estilização do Modo Claro ------------------- */
+
+body.light-mode .carrinho-main {
+    background-color: #ffffff;
+    color: #0e0e0c;
+}
